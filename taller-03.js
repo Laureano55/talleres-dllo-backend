@@ -36,7 +36,7 @@ function twoSum(lista, num) {
     return null;
 }
 
-console.log(twoSum([2, 7, 11, 15], 13));
+//console.log(twoSum([2, 7, 11, 15], 13));
 
 function  conversionRomana (roman) {
     let roman_numbers = {
