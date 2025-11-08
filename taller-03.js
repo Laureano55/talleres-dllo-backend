@@ -25,21 +25,18 @@ function desglosarString(palabra, tipo){
 //console.log(desglosarString("murcielagos", "vocales"))
 
 function twoSum(lista, num) {
-
-    let indexes = [0,0]
     for (let i = 0; i < lista.length; i++) {
-        if (lista[i] + lista[i+1] == num){
-            indexes[0] = i
-            indexes[1] = i+1
-            return indexes
+        for (let j = i + 1; j < lista.length; j++) {
+            if (lista[i] + lista[j] === num) {
+                return [i, j];
+            }
         }
     }
-
-    console.log("No se encontró respuesta")
-    return
+    console.log("No se encontró respuesta");
+    return null;
 }
 
-//console.log(twoSum([3,4,2], 18))
+console.log(twoSum([2, 7, 11, 15], 13));
 
 function  conversionRomana (roman) {
     let roman_numbers = {
@@ -93,4 +90,4 @@ function descomposicion(mamotreto) {
 
 }
 
-//console.log(descomposicion("malhumor,al,hum,humor,m,mal,malhu"))
+console.log(descomposicion("malhumor,al,hum,humor,m,mal,malhu"))
